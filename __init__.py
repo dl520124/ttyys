@@ -285,6 +285,20 @@ while True:
     if tansuo_state == 1:  # 突破探索模式
         number = 0
         time.sleep(1)
+
+        path = R.img("突破退出.png")  # 这里替换为你的图片地址
+        res = FindImages.find(path)
+        if res is not None:
+            print("突破退出相似度:", res["confidence"])
+            path = R.img("少女与面具.png")  # 这里替换为你的图片地址
+            res1 = FindImages.find(path,confidence=0.8)
+            if res1 is not None:
+                print("少女与面具相似度:", res1["confidence"])
+                action.click(res["center_x"], res["center_y"])
+
+
+
+
         path = R.img("庭院突破.png")  # 这里替换为你的图片地址
         res = FindImages.find(path)
         if res is not None:
@@ -421,8 +435,8 @@ while True:
         path = R.img("灰突破券不足.png")  # 这里替换为你的图片地址
         res = FindImages.find(path)
         if res is not None:
-            if res["confidence"] > 0.92:
-                print('突破券不足')
+            if res["confidence"] > 0.94:
+                print('突破券不足',res["confidence"])
                 path = R.img("突破退出.png")  # 这里替换为你的图片地址
                 res = FindImages.find(path)
                 if res is not None:
