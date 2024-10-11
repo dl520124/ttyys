@@ -68,6 +68,40 @@ while True:
                 print(x, y)
                 action.click(x, y)
 
+        path = R.img("悬赏.png")  # 这里替换为你的图片地址
+        res = FindImages.find(path)
+        if res is not None:
+            print("悬赏中心坐标:", res["center_x"], res["center_y"])
+            print("悬赏相似度:", res["confidence"])
+            print("悬赏在屏幕中的范围:", res["rect"])
+            if res["confidence"] > 0.8:
+                path = R.img("x悬赏.png")  # 这里替换为你的图片地址
+                res = FindImages.find(path)
+                if res is not None:
+                    print("x悬赏中心坐标:", res["center_x"], res["center_y"])
+                    print("x悬赏相似度:", res["confidence"])
+                    print("x悬赏在屏幕中的范围:", res["rect"])
+                    action.click(res["center_x"], res["center_y"])
+
+        path = R.img("现世悬赏.png")  # 这里替换为你的图片地址
+        res = FindImages.find(path)
+        if res is not None:
+            print("现世悬赏中心坐标:", res["center_x"], res["center_y"])
+            print("现世悬赏相似度:", res["confidence"])
+            print("现世悬赏在屏幕中的范围:", res["rect"])
+            if res["confidence"] > 0.8:
+                path = R.img("x悬赏.png")  # 这里替换为你的图片地址
+                res = FindImages.find(path)
+                if res is not None:
+                    print("x现世悬赏中心坐标:", res["center_x"], res["center_y"])
+                    print("x现世悬赏相似度:", res["confidence"])
+                    print("x现世悬赏在屏幕中的范围:", res["rect"])
+                    action.click(res["center_x"], res["center_y"])
+
+
+
+
+
         path = R.img("探索.png")  # 这里替换为你的图片地址
         res = FindImages.find(path)
         if res is not None:
@@ -207,20 +241,7 @@ while True:
                             y = random.randint(res["center_y"] - 3, res["center_y"] + 3)
                             action.click(x, y)
 
-        path = R.img("悬赏.png")  # 这里替换为你的图片地址
-        res = FindImages.find(path)
-        if res is not None:
-            print("悬赏中心坐标:", res["center_x"], res["center_y"])
-            print("悬赏相似度:", res["confidence"])
-            print("悬赏在屏幕中的范围:", res["rect"])
-            if res["confidence"] > 0.8:
-                path = R.img("x悬赏.png")  # 这里替换为你的图片地址
-                res = FindImages.find(path)
-                if res is not None:
-                    print("x悬赏中心坐标:", res["center_x"], res["center_y"])
-                    print("x悬赏相似度:", res["confidence"])
-                    print("x悬赏在屏幕中的范围:", res["rect"])
-                    action.click(res["center_x"],res["center_y"])
+
 
 
 
@@ -391,6 +412,21 @@ while True:
                 print('结算2点击x=', x, 'y=', y)
 
         path = R.img("悬赏.png")  # 这里替换为你的图片地址
+        res = FindImages.find(path)
+        if res is not None:
+            print("悬赏中心坐标:", res["center_x"], res["center_y"])
+            print("悬赏相似度:", res["confidence"])
+            print("悬赏在屏幕中的范围:", res["rect"])
+            if res["confidence"] > 0.8:
+                path = R.img("x悬赏.png")  # 这里替换为你的图片地址
+                res = FindImages.find(path)
+                if res is not None:
+                    print("x悬赏中心坐标:", res["center_x"], res["center_y"])
+                    print("x悬赏相似度:", res["confidence"])
+                    print("x悬赏在屏幕中的范围:", res["rect"])
+                    action.click(res["center_x"], res["center_y"])
+
+        path = R.img("现世悬赏.png")  # 这里替换为你的图片地址
         res = FindImages.find(path)
         if res is not None:
             print("悬赏中心坐标:", res["center_x"], res["center_y"])
@@ -1322,6 +1358,21 @@ while True:
                     print("x悬赏中心坐标:", res["center_x"], res["center_y"])
                     print("x悬赏相似度:", res["confidence"])
                     print("x悬赏在屏幕中的范围:", res["rect"])
+                    action.click(res["center_x"], res["center_y"])
+
+        path = R.img("现世悬赏.png")  # 这里替换为你的图片地址
+        res = FindImages.find(path)
+        if res is not None:
+            print("现世悬赏中心坐标:", res["center_x"], res["center_y"])
+            print("现世悬赏相似度:", res["confidence"])
+            print("现世悬赏在屏幕中的范围:", res["rect"])
+            if res["confidence"] > 0.8:
+                path = R.img("x悬赏.png")  # 这里替换为你的图片地址
+                res = FindImages.find(path)
+                if res is not None:
+                    print("x现世悬赏中心坐标:", res["center_x"], res["center_y"])
+                    print("x现世悬赏相似度:", res["confidence"])
+                    print("x现世悬赏在屏幕中的范围:", res["rect"])
                     action.click(res["center_x"], res["center_y"])
 
         path = R.img("结算1.png")  # 这里替换为你的图片地址
